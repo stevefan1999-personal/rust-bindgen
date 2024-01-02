@@ -726,7 +726,7 @@ impl Item {
         &self,
         ctx: &BindgenContext,
         to: &mut String,
-        level: u8,
+        level: usize,
     ) {
         to.push_str(&self.canonical_name(ctx));
         if let ItemKind::Type(ref ty) = *self.kind() {
